@@ -1,0 +1,174 @@
+/* ============================================================
+   Nextstep 公式サイト グローバルスタイル
+   （デザイン v3 の <style> ブロックを移植し、
+     :hover / アニメーション / レスポンシブをここで定義）
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+/* テキスト選択色を黄色に */
+::selection {
+  background: #ffe100;
+  color: #141414;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #141414;
+  font-family: var(--font-jp), "Hiragino Kaku Gothic ProN", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* 英語見出し・ラベル用フォント */
+.ns-en {
+  font-family: var(--font-en), sans-serif;
+}
+
+/* ぐちゃぐちゃ→まっすぐ の線を描くアニメーション */
+@keyframes ns-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* 黄色マーカー：画面に入ったタイミングで左から引かれる */
+.ns-marker {
+  background-repeat: no-repeat !important;
+  background-size: 0% 100% !important;
+  transition: background-size 0.8s cubic-bezier(0.6, 0.05, 0.3, 1) 0.15s;
+}
+.ns-marker.ns-on {
+  background-size: 100% 100% !important;
+}
+
+/* サービス／実績カードのホバー */
+#service .ns-card,
+#works .ns-card {
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+#service .ns-card:hover,
+#works .ns-card:hover {
+  transform: translateY(-4px);
+  border-color: #141414;
+}
+
+/* ヘッダーの CONTACT ボタン */
+.ns-cta {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ns-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 #141414;
+}
+
+/* ナビリンクのホバー */
+.ns-nav-a {
+  transition: color 0.15s ease;
+}
+.ns-nav-a:hover {
+  color: #8b8b80;
+}
+
+/* 黄色ボタン（ホバーで黒い影） */
+.ns-btn-y {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ns-btn-y:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 #141414;
+}
+
+/* 白／黒ボタン（ホバーで黄色い影） */
+.ns-btn-o {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ns-btn-o:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 0 #ffe100;
+}
+
+/* フッターリンクのホバー */
+.ns-foot-a {
+  transition: color 0.15s ease;
+}
+.ns-foot-a:hover {
+  color: #ffe100;
+}
+
+/* 動きが苦手な環境では静的表示に */
+@media (prefers-reduced-motion: reduce) {
+  .ns-marker {
+    background-size: 100% 100% !important;
+  }
+}
+
+/* スマホ用の改行（PC では隠す） */
+.ns-br-sp {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .ns-navlinks {
+    display: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .ns-hero-labels {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  .ns-hero-labels span {
+    font-size: 15px !important;
+  }
+  .ns-btn-row .ns-btn {
+    flex: 1 1 100% !important;
+  }
+  .ns-br-sp {
+    display: block;
+  }
+  .ns-statement-close {
+    font-size: 16px !important;
+  }
+  .ns-company-col {
+    text-align: center !important;
+  }
+  .ns-company-col > div:first-child {
+    justify-content: center !important;
+  }
+  .ns-company-col img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .ns-contact-h2 {
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+  }
+  /* スマホではモチーフ画像をボタンより上に */
+  .ns-hero-motif {
+    order: 1;
+  }
+  .ns-hero-btns {
+    order: 2;
+  }
+  .ns-label-strike {
+    text-decoration: line-through !important;
+  }
+}
