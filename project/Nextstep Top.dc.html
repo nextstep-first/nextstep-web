@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#FFFFFF;color:#2b2b2b;font-family:'Zen Kaku Gothic New','Hiragino Kaku Gothic ProN',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@keyframes ns-draw{to{stroke-dashoffset:0}}
+@keyframes ns-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes ns-wiggle{0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)}}
+@keyframes ns-spin{to{transform:rotate(360deg)}}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,0.92);backdrop-filter:blur(10px);border-bottom:1px solid #EFEFE8">
+  <div style="max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:13px clamp(20px,4.5vw,48px)">
+    <a href="#top" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#2b2b2b">
+      <img src="assets/n-mark.png" alt="Nextstep" style="height:30px;width:auto;display:block">
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:19px;letter-spacing:0.01em">Nextstep</span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:clamp(14px,2.4vw,30px);flex-wrap:wrap;justify-content:flex-end">
+      <a href="#statement" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;color:#2b2b2b;text-decoration:none" style-hover="color:#FFB10F">STATEMENT</a>
+      <a href="#problem" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;color:#2b2b2b;text-decoration:none" style-hover="color:#FFB10F">PROBLEM</a>
+      <a href="#service" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;color:#2b2b2b;text-decoration:none" style-hover="color:#FFB10F">SERVICE</a>
+      <a href="#works" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;color:#2b2b2b;text-decoration:none" style-hover="color:#FFB10F">WORKS</a>
+      <a href="#company" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;color:#2b2b2b;text-decoration:none" style-hover="color:#FFB10F">COMPANY</a>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:8px;background:#FFF315;color:#2b2b2b;text-decoration:none;font-weight:800;font-size:13px;letter-spacing:0.06em;padding:10px 20px;border-radius:999px;transition:transform .15s ease,box-shadow .15s ease" style-hover="transform:translateY(-2px);box-shadow:0 4px 0 #2b2b2b">CONTACT<span style="font-size:12px">→</span></a>
+    </nav>
+  </div>
+</header>
+
+<section id="top" data-screen-label="First View" style="position:relative;overflow:hidden;background:#FFFFFF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(64px,9vw,132px) clamp(20px,4.5vw,48px) 0">
+    <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+      <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+      <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(12px,1.3vw,14px);letter-spacing:0.2em;color:#2b2b2b">WE ARE NEXTSTEP.&nbsp; TURNING UNSPOKEN IDEAS INTO SYSTEMS.</span>
+    </div>
+    <h1 data-reveal="0.1" style="margin:clamp(28px,4vw,48px) 0 0;font-weight:900;color:#2b2b2b">
+      <span style="display:block;font-size:clamp(30px,5.3vw,66px);line-height:1.4;letter-spacing:0.015em">「分かっているのに、<br>言葉にできない。」</span>
+      <span style="display:block;margin-top:clamp(16px,2.4vw,30px);font-size:clamp(24px,4vw,50px);line-height:1.5;letter-spacing:0.02em">その想いを、<span style="background:linear-gradient(transparent 64%, #FFB10F 64%);padding:0 4px">仕組みに変える。</span></span>
+    </h1>
+    <p data-reveal="0.25" style="margin:clamp(28px,4vw,44px) 0 0;font-size:clamp(15px,1.3vw,17px);font-weight:500;line-height:2.2;color:#454545;max-width:640px">建設現場を知る<span style="font-weight:900;color:#2b2b2b;background:linear-gradient(transparent 64%, #FFF315 64%);padding:0 4px">「翻訳家」</span>として、<br>社長の頭の中にある違和感・経験・判断を、<br>AI・数字・文章・業務フローに変えていきます。</p>
+    <div data-reveal="0.4" style="display:flex;flex-wrap:wrap;gap:16px;margin-top:clamp(32px,4.5vw,52px)">
+      <a href="#contact" style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;background:#FFF315;color:#2b2b2b;text-decoration:none;padding:16px 34px;border-radius:8px;transition:transform .15s ease,box-shadow .15s ease" style-hover="transform:translateY(-3px);box-shadow:0 5px 0 #2b2b2b">
+        <span style="font-weight:900;font-size:16px;letter-spacing:0.04em">お問い合わせ</span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.22em;color:#2b2b2b">CONTACT →</span>
+      </a>
+      <a href="#service" style="display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;background:#FFFFFF;color:#2b2b2b;text-decoration:none;padding:14px 32px;border-radius:8px;border:2px solid #2b2b2b;transition:transform .15s ease,box-shadow .15s ease" style-hover="transform:translateY(-3px);box-shadow:0 5px 0 #FFB10F">
+        <span style="font-weight:900;font-size:16px;letter-spacing:0.04em">サービスを見る</span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.22em;color:#8B8B80">SERVICE →</span>
+      </a>
+    </div>
+  </div>
+  <div data-reveal="0.3" style="max-width:1240px;margin:clamp(20px,3vw,40px) auto 0;padding:0 clamp(20px,4.5vw,48px) clamp(40px,5vw,64px)">
+    <div style="position:relative">
+      {{ heroMotif }}
+      <div style="position:absolute;left:13%;top:2%;width:clamp(30px,3.4vw,42px)">
+        <div data-parallax="0.5">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-bob 3.2s ease-in-out infinite">
+            <circle cx="24" cy="24" r="17" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></circle>
+            <text x="24" y="25" text-anchor="middle" dominant-baseline="central" font-family="Manrope,sans-serif" font-weight="800" font-size="22" fill="#2b2b2b">?</text>
+          </svg>
+        </div>
+      </div>
+      <div data-comment-anchor="hero-bubble" style="position:absolute;left:25%;top:-9%;width:clamp(34px,3.8vw,48px)">
+        <div data-parallax="0.35">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-wiggle 3.6s ease-in-out infinite">
+            <rect x="7" y="9" width="34" height="24" rx="9" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+            <path d="M18 32 v7 l8 -7" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"></path>
+            <circle cx="16" cy="21" r="2.5" fill="#FFB10F"></circle>
+            <circle cx="24" cy="21" r="2.5" fill="#FFB10F"></circle>
+            <circle cx="32" cy="21" r="2.5" fill="#FFB10F"></circle>
+          </svg>
+        </div>
+      </div>
+      <div style="position:absolute;left:2%;top:46%;width:clamp(18px,2vw,26px)">
+        <div data-parallax="0.25">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-spin 12s linear infinite">
+            <path d="M24 4 L27 19 L42 24 L27 29 L24 44 L21 29 L6 24 L21 19 Z" fill="#FFB10F"></path>
+          </svg>
+        </div>
+      </div>
+      <div style="position:absolute;right:24%;top:-4%;width:clamp(30px,3.4vw,42px)">
+        <div data-parallax="0.45">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-bob 3.8s ease-in-out .6s infinite">
+            <rect x="13" y="7" width="22" height="34" rx="3" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+            <path d="M18 15 h12 M18 21 h12 M18 27 h8" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"></path>
+            <path d="M18 33 h10" stroke="#FFB10F" stroke-width="4" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </div>
+      <div style="position:absolute;right:12%;top:-12%;width:clamp(28px,3.2vw,40px)">
+        <div data-parallax="0.3">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-spin 16s linear infinite">
+            <circle cx="24" cy="24" r="9" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></circle>
+            <path d="M24 7 V12 M24 36 V41 M7 24 H12 M36 24 H41 M12 12 L15.5 15.5 M32.5 32.5 L36 36 M12 36 L15.5 32.5 M32.5 15.5 L36 12" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+            <circle cx="24" cy="24" r="3" fill="#2b2b2b"></circle>
+          </svg>
+        </div>
+      </div>
+      <div style="position:absolute;right:5%;top:30%;transform:translateY(-100%);width:clamp(26px,3vw,36px)">
+        <div data-parallax="0.2">
+          <svg viewBox="0 0 48 48" style="display:block;width:100%">
+            <path d="M9 30 C9 18 15 12 24 12 C33 12 39 18 39 30" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></path>
+            <path d="M20 12 h8 v-3.5 a2 2 0 0 0 -2 -2 h-4 a2 2 0 0 0 -2 2 Z" fill="#2b2b2b"></path>
+            <path d="M5 30 H43" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:space-between;gap:16px;margin-top:10px">
+      <span style="font-size:clamp(11px,1.1vw,13px);font-weight:700;letter-spacing:0.14em;color:#A3A396">混乱・感覚・属人化</span>
+      <span style="font-size:clamp(11px,1.1vw,13px);font-weight:700;letter-spacing:0.14em;color:#2b2b2b">整理・言語化・<span style="background:linear-gradient(transparent 64%, #FFF315 64%)">仕組み化</span></span>
+    </div>
+  </div>
+</section>
+
+<section id="statement" data-screen-label="Statement" style="background:#FFFFFF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(90px,12vw,170px) clamp(20px,4.5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,5vw,72px)">
+    <div>
+      <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+        <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+        <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">STATEMENT</span>
+        <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">私たちの理念</span>
+      </div>
+      <div data-reveal="0.1" style="width:clamp(48px,5vw,62px);margin-top:clamp(28px,3.5vw,44px)">
+        <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-bob 4s ease-in-out infinite">
+          <rect x="6" y="7" width="36" height="26" rx="9" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+          <path d="M12 22 C14 14 22 13 21 19 C20 25 13 24 15 18 C17 12 25 14 24 20 L36 20" fill="none" stroke="#FFB10F" stroke-width="2.5" stroke-linecap="round"></path>
+          <path d="M18 33 v6 l7 -6" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <h2 data-reveal="0.15" style="margin:clamp(20px,2.4vw,30px) 0 0;font-weight:900;font-size:clamp(28px,3.6vw,46px);line-height:1.6;letter-spacing:0.02em;color:#2b2b2b">「分かっているのに、<br>言葉にできない。」</h2>
+    </div>
+    <div style="max-width:560px">
+      <p data-reveal="0" style="margin:0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.4;color:#454545">それは、建設業の現場でよく起きることです。</p>
+      <p data-reveal="0.05" style="margin:2.2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.4;color:#454545">社長の頭の中には、答えがある。<br>職人の感覚にも、理由がある。<br>現場の違和感にも、必ず背景がある。</p>
+      <p data-reveal="0.05" style="margin:2.2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.4;color:#454545">けれど、それが言葉にならない。<br>数字にならない。<br>仕組みにならない。</p>
+      <p data-reveal="0.05" style="margin:2.2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.4;color:#454545">だから、伝わらない。<br>続かない。<br>会社に残らない。</p>
+      <p data-reveal="0.05" style="margin:2.2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:700;line-height:2.4;color:#2b2b2b">Nextstepは、建設業の“言葉にできない”を、<br>AI・文章・数字・業務フローに<span style="background:linear-gradient(transparent 64%, #FFF315 64%);padding:0 2px">翻訳</span>します。</p>
+      <p data-reveal="0.1" style="margin:2.4em 0 0;font-size:clamp(18px,1.7vw,22px);font-weight:900;line-height:2.1;color:#2b2b2b"><span style="background:linear-gradient(transparent 64%, #FFB10F 64%);padding:0 2px">現場の想いを、会社の仕組みに。</span><br>それが、Nextstepの仕事です。</p>
+    </div>
+  </div>
+</section>
+
+<section id="problem" data-screen-label="Problem" style="background:#FAFAF5;position:relative;overflow:hidden">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(90px,12vw,160px) clamp(20px,4.5vw,48px);position:relative">
+    <div style="position:absolute;right:clamp(20px,4.5vw,48px);top:clamp(70px,9vw,120px);width:clamp(44px,5.5vw,68px)">
+      <div data-parallax="0.4">
+        <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-bob 3.4s ease-in-out infinite">
+          <rect x="11" y="15" width="26" height="22" rx="5" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+          <circle cx="19" cy="25" r="2.8" fill="#2b2b2b"></circle>
+          <circle cx="29" cy="25" r="2.8" fill="#2b2b2b"></circle>
+          <path d="M19 31 h10" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"></path>
+          <path d="M24 15 V9" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+          <circle cx="24" cy="7" r="2.8" fill="#FFB10F"></circle>
+        </svg>
+      </div>
+    </div>
+    <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+      <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+      <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">PROBLEM</span>
+      <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">なぜAIを使いこなせないのか</span>
+    </div>
+    <h2 data-reveal="0.1" style="margin:clamp(24px,3vw,40px) 0 0;font-weight:900;font-size:clamp(26px,3.6vw,46px);line-height:1.7;letter-spacing:0.02em;color:#2b2b2b">AIが使えない理由は、<br>ツール不足ではなく、<span style="background:linear-gradient(transparent 64%, #FFB10F 64%);padding:0 4px">分解不足</span>です。</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(32px,5vw,72px);margin-top:clamp(36px,4.5vw,60px);align-items:start">
+      <div style="max-width:520px">
+        <p data-reveal="0" style="margin:0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.3;color:#454545">ChatGPTも、無料ツールも、目の前にある。<br>でも、なかなか現場で使いこなせない。</p>
+        <p data-reveal="0.05" style="margin:2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.3;color:#454545">理由はシンプルです。</p>
+        <p data-reveal="0.05" style="margin:2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.3;color:#454545">自分たちの仕事を、<br><strong style="font-weight:900;color:#2b2b2b">目的・成果物・業務・作業・手順</strong>まで<br>分解できていないからです。</p>
+        <p data-reveal="0.05" style="margin:2em 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.3;color:#454545">AIは、あいまいな指示では動けません。</p>
+        <p data-reveal="0.1" style="margin:2.4em 0 0;font-size:clamp(17px,1.5vw,20px);font-weight:900;line-height:2;color:#2b2b2b">でも、仕事が分解されれば、<br><span style="background:linear-gradient(transparent 64%, #FFB10F 64%);padding:0 2px">AIは現場の力になります。</span></p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div data-reveal="0" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px 22px;max-width:520px;margin-left:0">
+          <svg viewBox="0 0 48 48" style="flex:0 0 34px;width:34px;display:block">
+            <circle cx="24" cy="24" r="16" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></circle>
+            <circle cx="24" cy="24" r="9" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></circle>
+            <circle cx="24" cy="24" r="3" fill="#FFB10F"></circle>
+          </svg>
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border-bottom:3px solid #FFF315;padding-bottom:2px">01</span>
+          <span style="font-weight:900;font-size:clamp(17px,1.6vw,20px);color:#2b2b2b">目的</span>
+          <span style="margin-left:auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.2em;color:#A3A396">PURPOSE</span>
+        </div>
+        <div data-reveal="0.08" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px 22px;max-width:520px;margin-left:min(4vw,44px)">
+          <svg viewBox="0 0 48 48" style="flex:0 0 34px;width:34px;display:block">
+            <path d="M9 17 L24 9 L39 17 L24 25 Z" fill="#FFF315" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"></path>
+            <path d="M9 17 V33 L24 41 L39 33 V17" fill="none" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"></path>
+            <path d="M24 25 V41" stroke="#2b2b2b" stroke-width="3"></path>
+          </svg>
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border-bottom:3px solid #FFF315;padding-bottom:2px">02</span>
+          <span style="font-weight:900;font-size:clamp(17px,1.6vw,20px);color:#2b2b2b">成果物</span>
+          <span style="margin-left:auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.2em;color:#A3A396">DELIVERABLE</span>
+        </div>
+        <div data-reveal="0.16" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px 22px;max-width:520px;margin-left:min(8vw,88px)">
+          <svg viewBox="0 0 48 48" style="flex:0 0 34px;width:34px;display:block">
+            <rect x="12" y="9" width="24" height="32" rx="3" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+            <rect x="18" y="5" width="12" height="8" rx="2" fill="#FFF315" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <path d="M18 21 h12 M18 27 h12 M18 33 h8" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"></path>
+          </svg>
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border-bottom:3px solid #FFF315;padding-bottom:2px">03</span>
+          <span style="font-weight:900;font-size:clamp(17px,1.6vw,20px);color:#2b2b2b">業務</span>
+          <span style="margin-left:auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.2em;color:#A3A396">OPERATION</span>
+        </div>
+        <div data-reveal="0.24" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px 22px;max-width:520px;margin-left:min(12vw,132px)">
+          <svg viewBox="0 0 48 48" style="flex:0 0 34px;width:34px;display:block">
+            <g transform="rotate(-45 24 24)">
+              <rect x="14" y="8" width="20" height="9" rx="2" fill="#FFB10F" stroke="#2b2b2b" stroke-width="3"></rect>
+              <rect x="21.5" y="17" width="5" height="23" rx="2.5" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+            </g>
+          </svg>
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border-bottom:3px solid #FFF315;padding-bottom:2px">04</span>
+          <span style="font-weight:900;font-size:clamp(17px,1.6vw,20px);color:#2b2b2b">作業</span>
+          <span style="margin-left:auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.2em;color:#A3A396">TASK</span>
+        </div>
+        <div data-reveal="0.32" style="display:flex;align-items:center;gap:16px;background:#FFFFFF;border:1.5px solid #2b2b2b;border-radius:6px;padding:14px 22px;max-width:520px;margin-left:min(16vw,176px);box-shadow:5px 5px 0 #FFB10F">
+          <svg viewBox="0 0 48 48" style="flex:0 0 34px;width:34px;display:block">
+            <rect x="11" y="10" width="6" height="6" fill="#FFF315" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <rect x="11" y="21" width="6" height="6" fill="#FFB10F" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <rect x="11" y="32" width="6" height="6" fill="#2b2b2b"></rect>
+            <path d="M23 13 h14 M23 24 h14 M23 35 h10" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;border-bottom:3px solid #FFF315;padding-bottom:2px">05</span>
+          <span style="font-weight:900;font-size:clamp(17px,1.6vw,20px);color:#2b2b2b">手順</span>
+          <span style="margin-left:auto;font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.2em;color:#A3A396">PROCEDURE</span>
+        </div>
+        <p data-reveal="0.4" style="margin:16px 0 0 min(16vw,176px);font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em">ここまで分解できれば、AIが動き出す。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="service" data-screen-label="Service" style="background:#FFFFFF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(90px,12vw,160px) clamp(20px,4.5vw,48px)">
+    <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+      <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+      <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">SERVICE</span>
+      <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">事業領域</span>
+    </div>
+    <h2 data-reveal="0.1" style="margin:clamp(24px,3vw,40px) 0 0;font-weight:900;font-size:clamp(26px,3.6vw,46px);line-height:1.7;letter-spacing:0.02em;color:#2b2b2b">建設業を、<br>AIと実行支援で前に進める。</h2>
+    <p data-reveal="0.2" style="margin:clamp(20px,2.5vw,32px) 0 0;font-size:clamp(15px,1.2vw,16.5px);font-weight:500;line-height:2.2;color:#454545;max-width:600px">Nextstepは、建設業を起点に、<br>業務改善・人材育成・採用広報・現場支援を横断して支援します。</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;margin-top:clamp(40px,5vw,64px)">
+      <div data-reveal="0" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(28px,3vw,38px);transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-4px);border-color:#2b2b2b">
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px">01</span>
+          <span style="width:28px;height:3px;background:#FFF315;display:block"></span>
+          <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.22em;color:#8B8B80">AI TRAINING</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 42px;width:42px;display:block">
+            <path d="M5 19 L24 10 L43 19 L24 28 Z" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M13 23 v7 c0 3.5 22 3.5 22 0 v-7" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></path>
+            <path d="M43 19 v9" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"></path>
+            <circle cx="43" cy="31" r="2.5" fill="#FFB10F"></circle>
+          </svg>
+        </div>
+        <h3 style="margin:22px 0 0;font-weight:900;font-size:clamp(20px,1.8vw,24px);letter-spacing:0.02em;color:#2b2b2b">AI活用研修</h3>
+        <p style="margin:14px 0 0;font-size:15px;font-weight:800;line-height:1.9;color:#2b2b2b">職人・スタッフが、AIを使いこなせるように。</p>
+        <p style="margin:14px 0 0;font-size:14px;font-weight:500;line-height:2.1;color:#454545">ChatGPTの使い方だけを教えるのではなく、見積書、工程表、議事録、社内共有、採用文、営業資料など、日々の業務にそのまま使える形まで落とし込みます。</p>
+      </div>
+      <div data-reveal="0.1" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(28px,3vw,38px);transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-4px);border-color:#2b2b2b">
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px">02</span>
+          <span style="width:28px;height:3px;background:#FFF315;display:block"></span>
+          <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.22em;color:#8B8B80">AI SYSTEM</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 42px;width:42px;display:block">
+            <rect x="9" y="26" width="11" height="11" rx="1.5" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></rect>
+            <rect x="28" y="26" width="11" height="11" rx="1.5" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+            <rect x="18.5" y="13" width="11" height="11" rx="1.5" fill="#FFB10F" stroke="#2b2b2b" stroke-width="3"></rect>
+          </svg>
+        </div>
+        <h3 style="margin:22px 0 0;font-weight:900;font-size:clamp(20px,1.8vw,24px);letter-spacing:0.02em;color:#2b2b2b">建設業向けAIお試し開発</h3>
+        <p style="margin:14px 0 0;font-size:15px;font-weight:800;line-height:1.9;color:#2b2b2b">まず小さく作って、効果を確かめる。</p>
+        <p style="margin:14px 0 0;font-size:14px;font-weight:500;line-height:2.1;color:#454545">大きなシステムをいきなり作るのではなく、現場で本当に使える小さな仕組みから始めます。日報、見積、問い合わせ対応、採用管理、社内ナレッジなど、業務に合わせてAI活用を設計します。</p>
+      </div>
+      <div data-reveal="0.2" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(28px,3vw,38px);transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-4px);border-color:#2b2b2b">
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px">03</span>
+          <span style="width:28px;height:3px;background:#FFF315;display:block"></span>
+          <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.22em;color:#8B8B80">YOUTUBE GROWTH</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 42px;width:42px;display:block">
+            <rect x="7" y="13" width="34" height="24" rx="7" fill="#2b2b2b"></rect>
+            <path d="M21 19 L31 25 L21 31 Z" fill="#FFF315"></path>
+          </svg>
+        </div>
+        <h3 style="margin:22px 0 0;font-weight:900;font-size:clamp(20px,1.8vw,24px);letter-spacing:0.02em;color:#2b2b2b">建設業特化型YouTube運用代行</h3>
+        <p style="margin:14px 0 0;font-size:15px;font-weight:800;line-height:1.9;color:#2b2b2b">業界を知る目線で、集客・採用につなげる。</p>
+        <p style="margin:14px 0 0;font-size:14px;font-weight:500;line-height:2.1;color:#454545">ただ動画を作るのではなく、会社の強み、職人の魅力、現場のこだわりを、伝わる言葉と映像に変えます。</p>
+      </div>
+      <div data-reveal="0.3" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(28px,3vw,38px);transition:transform .2s ease,border-color .2s ease;display:flex;flex-direction:column;gap:0" style-hover="transform:translateY(-4px);border-color:#2b2b2b">
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:18px">04</span>
+          <span style="width:28px;height:3px;background:#FFF315;display:block"></span>
+          <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11.5px;letter-spacing:0.22em;color:#8B8B80">CONSTRUCTION SUPPORT</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 42px;width:42px;display:block">
+            <path d="M9 30 C9 18 15 12 24 12 C33 12 39 18 39 30" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></path>
+            <path d="M20 12 h8 v-3.5 a2 2 0 0 0 -2 -2 h-4 a2 2 0 0 0 -2 2 Z" fill="#2b2b2b"></path>
+            <path d="M5 30 H43" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <h3 style="margin:22px 0 0;font-weight:900;font-size:clamp(20px,1.8vw,24px);letter-spacing:0.02em;color:#2b2b2b">建設 / 外構の下請け工事</h3>
+        <p style="margin:14px 0 0;font-size:15px;font-weight:800;line-height:1.9;color:#2b2b2b">建設工事を原点に持つ会社だから、現場まで分かる。</p>
+        <p style="margin:14px 0 0;font-size:14px;font-weight:500;line-height:2.1;color:#454545">Nextstepは、7年前に建設工事の会社として立ち上がりました。だからこそ、机上の支援だけではなく、現場の段取り、職人とのやり取り、工事の流れまで理解したうえで支援できます。必要に応じて、建設・外構工事そのものも対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="works" data-screen-label="Works" style="background:#FFFFFF;background-image:repeating-linear-gradient(0deg,rgba(240,210,0,0.09) 0 1px,transparent 1px 44px),repeating-linear-gradient(90deg,rgba(240,210,0,0.09) 0 1px,transparent 1px 44px)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(90px,12vw,160px) clamp(20px,4.5vw,48px)">
+    <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+      <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+      <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">WORKS</span>
+      <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">実績</span>
+    </div>
+    <h2 data-reveal="0.1" style="margin:clamp(24px,3vw,40px) 0 0;font-weight:900;font-size:clamp(26px,3.6vw,46px);line-height:1.7;letter-spacing:0.02em;color:#2b2b2b">現場とAIに、<br>誠実に向き合ってきた証。</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:22px;margin-top:clamp(40px,5vw,64px)">
+      <div data-reveal="0" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(26px,2.6vw,34px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="background:#2b2b2b;color:#FFFFFF;font-weight:800;font-size:14px;letter-spacing:0.06em;padding:7px 22px 7px 16px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,0 100%)">AI研修</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 34px;width:34px;display:block">
+            <path d="M5 19 L24 10 L43 19 L24 28 Z" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round"></path>
+            <path d="M13 23 v7 c0 3.5 22 3.5 22 0 v-7" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></path>
+            <path d="M43 19 v9" stroke="#2b2b2b" stroke-width="2.5" stroke-linecap="round"></path>
+            <circle cx="43" cy="31" r="2.5" fill="#FFB10F"></circle>
+          </svg>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFB10F;margin-top:11px"></span>上場企業でのAIリスキリング研修</li>
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFF315;margin-top:11px"></span>大学でのAIセミナー</li>
+        </ul>
+      </div>
+      <div data-reveal="0.1" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(26px,2.6vw,34px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="background:#2b2b2b;color:#FFFFFF;font-weight:800;font-size:14px;letter-spacing:0.06em;padding:7px 22px 7px 16px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,0 100%)">YouTube運用</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 34px;width:34px;display:block">
+            <rect x="7" y="13" width="34" height="24" rx="7" fill="#2b2b2b"></rect>
+            <path d="M21 19 L31 25 L21 31 Z" fill="#FFF315"></path>
+          </svg>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFB10F;margin-top:11px"></span>工務店YouTubeの運用支援</li>
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFF315;margin-top:11px"></span>建設・不動産系動画の企画・制作・分析</li>
+        </ul>
+      </div>
+      <div data-reveal="0.2" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(26px,2.6vw,34px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="background:#2b2b2b;color:#FFFFFF;font-weight:800;font-size:14px;letter-spacing:0.06em;padding:7px 22px 7px 16px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,0 100%)">建設業支援</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 34px;width:34px;display:block">
+            <rect x="10" y="26" width="6" height="12" fill="#FFF315" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <rect x="20" y="20" width="6" height="18" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <rect x="30" y="12" width="6" height="26" fill="#FFB10F" stroke="#2b2b2b" stroke-width="2.5"></rect>
+            <path d="M6 40 H42" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFB10F;margin-top:11px"></span>建設業の業務改善</li>
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFF315;margin-top:11px"></span>採用広報</li>
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFB10F;margin-top:11px"></span>現場目線での仕組み化</li>
+        </ul>
+      </div>
+      <div data-reveal="0.3" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(26px,2.6vw,34px);display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <span style="background:#2b2b2b;color:#FFFFFF;font-weight:800;font-size:14px;letter-spacing:0.06em;padding:7px 22px 7px 16px;clip-path:polygon(0 0,calc(100% - 11px) 0,100% 50%,calc(100% - 11px) 100%,0 100%)">建設・外構工事</span>
+          <svg viewBox="0 0 48 48" style="margin-left:auto;flex:0 0 34px;width:34px;display:block">
+            <path d="M24 6 V22" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M19 6 h10" stroke="#2b2b2b" stroke-width="3" stroke-linecap="round"></path>
+            <path d="M16 22 h16 v6 a8 8 0 0 1 -16 0 Z" fill="#FFB10F" stroke="#2b2b2b" stroke-width="3" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFB10F;margin-top:11px"></span>建設工事を原点とした現場対応</li>
+          <li style="display:flex;gap:12px;font-size:14.5px;font-weight:700;line-height:1.8;color:#454545"><span style="flex:0 0 16px;height:3px;background:#FFF315;margin-top:11px"></span>工事の段取り・職人連携・現場管理</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="company" data-screen-label="Company" style="background:#FAFAF5">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(90px,12vw,160px) clamp(20px,4.5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(40px,5vw,72px);align-items:start">
+    <div style="display:flex;flex-direction:column;gap:clamp(28px,3.5vw,44px)">
+      <div data-reveal="0" style="display:flex;align-items:center;gap:12px">
+        <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+        <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">COMPANY</span>
+        <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">会社概要</span>
+      </div>
+      <h2 data-reveal="0.1" style="margin:0;font-weight:900;font-size:clamp(21px,2.5vw,34px);line-height:1.6;letter-spacing:0.02em;color:#2b2b2b;white-space:nowrap">次の一歩を、<span style="background:linear-gradient(transparent 64%, #FFF315 64%);padding:0 2px">現場と共に。</span></h2>
+      <div data-reveal="0.2" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:12px;padding:clamp(32px,3.5vw,48px);display:flex;flex-direction:column;align-items:center;gap:22px;max-width:420px">
+        <img src="assets/n-mark.png" alt="Nextstep ロゴ" style="display:block;width:clamp(96px,10vw,130px);height:auto">
+        <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:22px;letter-spacing:0.02em;color:#2b2b2b">Nextstep</span>
+        <div style="display:flex;flex-direction:column;gap:5px;width:120px">
+          <span style="height:4px;background:#FFF315;display:block;width:100%"></span>
+          <span style="height:4px;background:#FFB10F;display:block;width:72%"></span>
+          <span style="height:4px;background:#FFF315;display:block;width:46%"></span>
+        </div>
+      </div>
+    </div>
+    <div data-reveal="0.15" style="background:#FFFFFF;border:1px solid #E5E5DC;border-radius:10px;padding:clamp(10px,1.4vw,18px) clamp(24px,3vw,40px)">
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0;border-bottom:1px solid #ECECE4">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">屋号</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:1.9;color:#2b2b2b">Nextstep</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0;border-bottom:1px solid #ECECE4">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">代表</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:1.9;color:#2b2b2b">服部 健児</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0;border-bottom:1px solid #ECECE4">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">事業内容</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:1.9;color:#2b2b2b">戦略AI総務 / 建設業専門FDE</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0;border-bottom:1px solid #ECECE4">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">所在地</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:1.9;color:#2b2b2b">名古屋市中村区名駅4-24-5 第2森ビル401</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0;border-bottom:1px solid #ECECE4">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">お問い合わせ</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:1.9;color:#2b2b2b">nextstep@techsupply.work</span>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(84px,140px) 1fr;gap:8px;padding:20px 0">
+        <span style="font-size:13px;font-weight:700;color:#8B8B80;letter-spacing:0.1em;padding-top:2px">事業領域</span>
+        <span style="font-size:15.5px;font-weight:700;line-height:2.2;color:#2b2b2b">AI活用研修<br>小規模AIシステム開発<br>YouTube運用代行<br>建設・外構工事</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-screen-label="Contact" style="background:#FFFFFF;overflow:hidden">
+  <div style="max-width:900px;margin:0 auto;padding:clamp(100px,14vw,180px) clamp(20px,4.5vw,48px) clamp(50px,6vw,80px);text-align:center">
+    <div data-reveal="0" style="width:clamp(52px,5.5vw,66px);margin:0 auto">
+      <svg viewBox="0 0 48 48" style="display:block;width:100%;animation:ns-bob 3.6s ease-in-out infinite">
+        <rect x="5" y="9" width="26" height="17" rx="7" fill="#FFF315" stroke="#2b2b2b" stroke-width="3"></rect>
+        <rect x="19" y="23" width="24" height="16" rx="7" fill="#FFFFFF" stroke="#2b2b2b" stroke-width="3"></rect>
+        <circle cx="26" cy="31" r="2" fill="#2b2b2b"></circle>
+        <circle cx="31" cy="31" r="2" fill="#2b2b2b"></circle>
+        <circle cx="36" cy="31" r="2" fill="#2b2b2b"></circle>
+      </svg>
+    </div>
+    <div data-reveal="0.05" style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:26px">
+      <span style="width:30px;height:3px;background:#FFF315;display:block"></span>
+      <span style="width:8px;height:8px;background:#FFB10F;display:block"></span>
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:14px;letter-spacing:0.24em">CONTACT</span>
+      <span style="font-size:12.5px;font-weight:700;color:#8B8B80;letter-spacing:0.14em">お問い合わせ</span>
+    </div>
+    <h2 data-reveal="0.1" style="margin:clamp(24px,3vw,40px) 0 0;font-weight:900;font-size:clamp(26px,3.6vw,44px);line-height:1.7;letter-spacing:0.02em;color:#2b2b2b">まだ<span style="background:linear-gradient(transparent 64%, #FFB10F 64%);padding:0 4px">言葉になっていない相談</span>から、<br>お聞かせください。</h2>
+    <p data-reveal="0.2" style="margin:clamp(28px,3.5vw,44px) 0 0;font-size:clamp(14.5px,1.2vw,16px);font-weight:500;line-height:2.4;color:#454545">「何を頼めばいいか分からない」<br>「社内の課題をうまく説明できない」<br>「AIを使いたいけど、何から始めればいいか分からない」</p>
+    <p data-reveal="0.25" style="margin:2em 0 0;font-size:clamp(16px,1.4vw,19px);font-weight:900;line-height:2.1;color:#2b2b2b">その段階からで大丈夫です。<br>Nextstepが、課題を一緒に整理します。</p>
+    <div data-reveal="0.35" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:clamp(36px,4.5vw,56px)">
+      <a href="#" style="display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:#FFF315;color:#2b2b2b;text-decoration:none;padding:16px 40px;border-radius:8px;transition:transform .15s ease,box-shadow .15s ease" style-hover="transform:translateY(-3px);box-shadow:0 5px 0 #2b2b2b">
+        <span style="font-weight:900;font-size:16px;letter-spacing:0.04em">LINEで相談する</span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.22em">LINE →</span>
+      </a>
+      <a href="mailto:nextstep@techsupply.work" style="display:inline-flex;flex-direction:column;align-items:center;gap:2px;background:#2b2b2b;color:#FFFFFF;text-decoration:none;padding:16px 40px;border-radius:8px;transition:transform .15s ease,box-shadow .15s ease" style-hover="transform:translateY(-3px);box-shadow:0 5px 0 #FFB10F">
+        <span style="font-weight:900;font-size:16px;letter-spacing:0.04em">お問い合わせする</span>
+        <span style="font-family:'Manrope',sans-serif;font-weight:700;font-size:10.5px;letter-spacing:0.22em;color:#B9B9B0">MAIL →</span>
+      </a>
+    </div>
+    <p data-reveal="0.4" style="margin:28px 0 0;font-family:'Manrope',sans-serif;font-weight:700;font-size:12.5px;letter-spacing:0.1em;color:#8B8B80">nextstep@techsupply.work</p>
+  </div>
+  <div data-reveal="0.2" style="max-width:1240px;margin:0 auto;padding:0 clamp(20px,4.5vw,48px) clamp(56px,7vw,90px)">
+    {{ contactLines }}
+  </div>
+</section>
+
+<footer style="background:#2b2b2b;color:#FFFFFF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(36px,4.5vw,56px) clamp(20px,4.5vw,48px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <span style="font-family:'Manrope',sans-serif;font-weight:800;font-size:20px">Nextstep<span style="display:inline-block;width:10px;height:10px;background:#FFF315;margin-left:6px"></span><span style="display:inline-block;width:10px;height:10px;background:#FFB10F;margin-left:4px"></span></span>
+      <span style="font-size:12px;font-weight:500;color:#9A9A90;letter-spacing:0.06em">建設業 × AI × 言語化 × 仕組み化 × 実行支援</span>
+    </div>
+    <nav style="display:flex;flex-wrap:wrap;gap:clamp(14px,2.4vw,26px)">
+      <a href="#statement" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">STATEMENT</a>
+      <a href="#problem" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">PROBLEM</a>
+      <a href="#service" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">SERVICE</a>
+      <a href="#works" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">WORKS</a>
+      <a href="#company" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">COMPANY</a>
+      <a href="#contact" style="font-family:'Manrope',sans-serif;font-weight:700;font-size:11px;letter-spacing:0.16em;color:#C9C9C0;text-decoration:none" style-hover="color:#FFF315">CONTACT</a>
+    </nav>
+    <span style="font-family:'Manrope',sans-serif;font-weight:500;font-size:11.5px;letter-spacing:0.08em;color:#77776E">© 2026 Nextstep</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;animateMotif&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;ブランドモチーフ&quot;},
+  &quot;motifOpacity&quot;: {&quot;editor&quot;: &quot;range&quot;, &quot;default&quot;: 1, &quot;min&quot;: 0.1, &quot;max&quot;: 1, &quot;step&quot;: 0.05, &quot;tsType&quot;: &quot;number&quot;, &quot;section&quot;: &quot;ブランドモチーフ&quot;},
+  &quot;enableParallax&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;スクロール演出&quot;}
+}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this._raf = null;
+    this._io = null;
+    requestAnimationFrame(() => this._initFx());
+  }
+
+  componentWillUnmount() {
+    if (this._raf) cancelAnimationFrame(this._raf);
+    if (this._io) this._io.disconnect();
+  }
+
+  _initFx() {
+    if (this._fxDone) return;
+    this._fxDone = true;
+
+    const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+    revealEls.forEach((el) => {
+      const d = parseFloat(el.getAttribute('data-reveal')) || 0;
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity .9s ease ' + d + 's, transform .9s cubic-bezier(.22,1,.36,1) ' + d + 's';
+    });
+    this._io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          this._io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach((el) => this._io.observe(el));
+
+    const enableParallax = this.props.enableParallax ?? true;
+    if (!enableParallax) return;
+    const pEls = Array.from(document.querySelectorAll('[data-parallax]'));
+    const tick = () => {
+      const h = window.innerHeight || 800;
+      pEls.forEach((el) => {
+        const anchor = el.parentElement || el;
+        const r = anchor.getBoundingClientRect();
+        const p = (r.top + r.height / 2 - h / 2) / h;
+        const s = parseFloat(el.getAttribute('data-parallax')) || 0.3;
+        el.style.transform = 'translateY(' + (-p * s * 130).toFixed(1) + 'px)';
+      });
+      this._raf = requestAnimationFrame(tick);
+    };
+    this._raf = requestAnimationFrame(tick);
+  }
+
+  renderVals() {
+    const animate = this.props.animateMotif ?? true;
+    const opacity = this.props.motifOpacity ?? 1;
+    const path = (d, len, delay, key, color) => React.createElement('path', {
+      key,
+      d,
+      fill: 'none',
+      stroke: color || '#FFF315',
+      strokeWidth: 5.5,
+      strokeLinecap: 'round',
+      strokeLinejoin: 'round',
+      style: animate
+        ? { strokeDasharray: len, strokeDashoffset: len, animation: 'ns-draw 2s cubic-bezier(.55,.1,.3,1) ' + delay + 's forwards' }
+        : null
+    });
+
+    const tangleD =
+      'M 60 200 C 140 60 300 90 250 190 C 210 270 90 260 130 150 ' +
+      'C 165 60 320 140 280 240 C 245 320 100 300 90 200 ' +
+      'C 80 100 220 70 300 130 C 370 185 300 300 200 280 ' +
+      'C 110 262 120 120 230 110 C 330 100 360 220 260 250 ' +
+      'C 180 273 110 200 170 130 C 225 70 350 60 340 170 ' +
+      'C 332 250 220 310 150 240 C 100 190 170 100 260 160 ' +
+      'C 330 205 305 265 345 235 C 385 205 380 196 430 195 ' +
+      'C 500 197 570 194 655 194';
+
+    const fan = [
+      ['M 655 194 C 715 194 715 108 775 108 L 1160 108', 580, '#FFF315'],
+      ['M 655 194 C 715 194 715 166 775 166 L 1160 166', 545, '#FFB10F'],
+      ['M 655 194 C 715 194 715 224 775 224 L 1160 224', 545, '#FFF315'],
+      ['M 655 194 C 715 194 715 282 775 282 L 1160 282', 580, '#FFF315']
+    ];
+
+    const heroMotif = React.createElement(
+      'svg',
+      { viewBox: '0 0 1200 360', style: { width: '100%', height: 'auto', display: 'block', opacity }, 'aria-hidden': true },
+      path(tangleD, 4200, 0, 'tangle'),
+      ...fan.map((f, i) => path(f[0], f[1], 1.05 + i * 0.12, 'fan' + i, f[2]))
+    );
+
+    const straight = [
+      ['M 40 22 L 1160 22', 1140, '#FFF315'],
+      ['M 40 64 L 1010 64', 990, '#FFB10F'],
+      ['M 40 106 L 1120 106', 1100, '#FFF315']
+    ];
+    const contactLines = React.createElement(
+      'svg',
+      { viewBox: '0 0 1200 128', style: { width: '100%', height: 'auto', display: 'block', opacity }, 'aria-hidden': true },
+      ...straight.map((s, i) => path(s[0], s[1], 0.2 + i * 0.15, 'line' + i, s[2]))
+    );
+
+    return { heroMotif, contactLines };
+  }
+}
+</script>
+</body>
+</html>
