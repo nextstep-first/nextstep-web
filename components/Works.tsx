@@ -50,7 +50,16 @@ export default function Works() {
         >
           現場とAIに、
           <br />
-          誠実に向き合ってきた証。
+          <span
+            className="ns-marker"
+            style={{
+              background: "linear-gradient(transparent 64%, #FFE100 64%)",
+              padding: "0 4px",
+            }}
+          >
+            誠実に向き合ってきた証
+          </span>
+          。
         </h2>
 
         <div

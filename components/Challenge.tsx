@@ -1,15 +1,65 @@
 import SectionHead from "./SectionHead";
 
+/* 黄色背景でも読みやすい濃い本文色 */
 const body = {
   fontSize: "clamp(15px,1.2vw,16.5px)",
   fontWeight: 500 as const,
   lineHeight: 2.4,
-  color: "#2B2B28",
+  color: "#1A1A15",
 };
 
 export default function Challenge() {
   return (
-    <section id="challenge" data-screen-label="Challenge" style={{ background: "#FAFAF5" }}>
+    <section
+      id="challenge"
+      data-screen-label="Challenge"
+      style={{ background: "#FFE100", position: "relative", overflow: "hidden" }}
+    >
+      {/* 装飾：階段状のライン ＋ n マーク（ホームページの要のセクションなので、
+          黄色背景に薄い黒のあしらいでブランドらしさを添える） */}
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          inset: 0,
+          overflow: "hidden",
+          pointerEvents: "none",
+        }}
+      >
+        <svg
+          viewBox="0 0 260 200"
+          style={{
+            position: "absolute",
+            right: "clamp(3%,6vw,9%)",
+            bottom: "clamp(9%,11vw,16%)",
+            width: "clamp(150px,22vw,300px)",
+            opacity: 0.16,
+          }}
+        >
+          <path
+            d="M10 190 H70 V150 H120 V110 H170 V70 H230 V30"
+            fill="none"
+            stroke="#141414"
+            strokeWidth="4"
+            strokeLinejoin="round"
+            strokeLinecap="round"
+          />
+        </svg>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/assets/n-mark.png"
+          alt=""
+          style={{
+            position: "absolute",
+            right: "clamp(4%,7vw,10%)",
+            bottom: "clamp(11%,13vw,18%)",
+            width: "clamp(110px,15vw,200px)",
+            filter: "brightness(0)",
+            opacity: 0.08,
+          }}
+        />
+      </div>
+
       <div
         style={{
           maxWidth: 1240,
@@ -18,10 +68,12 @@ export default function Challenge() {
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit,minmax(min(100%,340px),1fr))",
           gap: "clamp(40px,5vw,72px)",
+          position: "relative",
+          zIndex: 1,
         }}
       >
         <div>
-          <SectionHead en="CHALLENGE" ja="課題" />
+          <SectionHead en="CHALLENGE" ja="課題" barColor="#141414" jaColor="#141414" />
           <h2
             style={{
               margin: "clamp(24px,3vw,40px) 0 0",
@@ -29,11 +81,12 @@ export default function Challenge() {
               fontSize: "clamp(28px,3.6vw,46px)",
               lineHeight: 1.6,
               letterSpacing: "0.02em",
+              color: "#141414",
             }}
           >
-            「分かっているのに、
+            分かっているのに、
             <br />
-            言葉にできない。」
+            言葉にできない。
           </h2>
         </div>
 
@@ -67,10 +120,13 @@ export default function Challenge() {
             <br />
             AI・文章・数字・業務フローに
             <span
-              className="ns-marker"
               style={{
-                background: "linear-gradient(transparent 64%, #FFE100 64%)",
-                padding: "0 2px",
+                background: "#141414",
+                color: "#FFFFFF",
+                padding: "1px 8px",
+                borderRadius: 4,
+                fontWeight: 900,
+                whiteSpace: "nowrap",
               }}
             >
               翻訳

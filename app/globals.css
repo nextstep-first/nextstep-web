@@ -28,6 +28,11 @@ body {
   font-family: var(--font-jp), "Hiragino Kaku Gothic ProN", sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  /* 単語の途中での不自然な改行を防ぐ（「翻訳し／ます」のようなちぎれ対策）。
+     文節のまとまりを優先し、どうしても収まらないときだけ折り返す。 */
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
 }
 
 img {
@@ -129,15 +134,6 @@ img {
 }
 
 @media (max-width: 640px) {
-  .ns-hero-labels {
-    flex-direction: column !important;
-    align-items: center !important;
-    text-align: center !important;
-    gap: 8px !important;
-  }
-  .ns-hero-labels span {
-    font-size: 15px !important;
-  }
   .ns-btn-row .ns-btn {
     flex: 1 1 100% !important;
   }
@@ -160,15 +156,5 @@ img {
   .ns-contact-h2 {
     font-size: 16px !important;
     line-height: 1.9 !important;
-  }
-  /* スマホではモチーフ画像をボタンより上に */
-  .ns-hero-motif {
-    order: 1;
-  }
-  .ns-hero-btns {
-    order: 2;
-  }
-  .ns-label-strike {
-    text-decoration: line-through !important;
   }
 }

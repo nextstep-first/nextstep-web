@@ -1,12 +1,17 @@
-/* 各セクション共通の小見出し（黄色バー ＋ 英語ラベル ＋ 日本語ラベル） */
+/* 各セクション共通の小見出し（バー ＋ 英語ラベル ＋ 日本語ラベル）
+   黄色背景のセクションでは barColor / jaColor を濃色に切り替えて見えるようにする */
 export default function SectionHead({
   en,
   ja,
   center = false,
+  barColor = "#FFE100",
+  jaColor = "#8B8B80",
 }: {
   en: string;
   ja: string;
   center?: boolean;
+  barColor?: string;
+  jaColor?: string;
 }) {
   return (
     <div
@@ -19,7 +24,7 @@ export default function SectionHead({
       }}
     >
       <span
-        style={{ width: 34, height: 3, background: "#FFE100", display: "block" }}
+        style={{ width: 34, height: 3, background: barColor, display: "block" }}
       />
       <span
         className="ns-en"
@@ -31,7 +36,7 @@ export default function SectionHead({
         style={{
           fontSize: 12.5,
           fontWeight: 700,
-          color: "#8B8B80",
+          color: jaColor,
           letterSpacing: "0.14em",
         }}
       >

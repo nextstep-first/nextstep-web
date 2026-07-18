@@ -61,10 +61,6 @@ export default function Company() {
               width: "min(150px,36%)",
               height: "auto",
               marginTop: "clamp(32px,4vw,52px)",
-              border: "1px solid #ECECE4",
-              borderRadius: 8,
-              padding: 22,
-              background: "#FFFFFF",
             }}
           />
         </div>
