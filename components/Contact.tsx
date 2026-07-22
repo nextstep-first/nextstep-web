@@ -83,9 +83,11 @@ export default function Contact() {
             marginTop: "clamp(36px,4.5vw,56px)",
           }}
         >
-          {/* TODO: LINE公式アカウントのURLが決まったら href を差し替える（現在は仮） */}
+          {/* 公式LINEの友だち追加リンク */}
           <a
-            href="#"
+            href="https://lin.ee/p409CJJ"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ns-btn-y"
             style={{
               display: "inline-flex",
@@ -109,8 +111,11 @@ export default function Contact() {
               LINE →
             </span>
           </a>
+          {/* お問い合わせフォーム（Googleフォーム） */}
           <a
-            href="mailto:nextstep@techsupply.work"
+            href="https://forms.gle/Qad5aTTvXL4yQNby7"
+            target="_blank"
+            rel="noopener noreferrer"
             className="ns-btn-o"
             style={{
               display: "inline-flex",
@@ -136,7 +141,7 @@ export default function Contact() {
                 color: "#B9B9B0",
               }}
             >
-              MAIL →
+              FORM →
             </span>
           </a>
         </div>
