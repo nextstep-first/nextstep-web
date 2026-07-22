@@ -48,11 +48,11 @@ export default function Challenge() {
           alt=""
           style={{
             position: "absolute",
-            left: "65%",
+            left: "60%",
             bottom: "96%",
             width: "clamp(56px, 9vw, 125px)",
             height: "auto",
-            transform: "translateY(10px)",
+            transform: "translateY(34px)",
           }}
         />
       </div>
