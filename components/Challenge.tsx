@@ -52,6 +52,7 @@ export default function Challenge() {
             bottom: "96%",
             width: "clamp(56px, 9vw, 125px)",
             height: "auto",
+            transform: "translateY(10px)",
           }}
         />
       </div>

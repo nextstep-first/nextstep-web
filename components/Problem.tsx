@@ -167,7 +167,15 @@ export default function Problem() {
                 letterSpacing: "0.08em",
               }}
             >
-              ここまで分解できれば、AIが動き出す。
+              <span
+                className="ns-marker"
+                style={{
+                  background: "linear-gradient(transparent 64%, #FFE100 64%)",
+                  padding: "0 4px",
+                }}
+              >
+                ここまで分解できれば、AIが動き出す。
+              </span>
             </p>
           </div>
         </div>

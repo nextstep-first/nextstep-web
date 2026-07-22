@@ -1,31 +1,36 @@
 import SectionHead from "./SectionHead";
 
+// titleMain＝黒字のまま／titleAccent＝赤字にする部分
 const SERVICES = [
   {
     no: "01",
     en: "AI TRAINING",
-    title: "AI活用研修",
+    titleMain: "",
+    titleAccent: "AI活用研修",
     copy: "職人・スタッフが、AIを使いこなせるように。",
     body: "ChatGPTの使い方だけを教えるのではなく、見積書、工程表、議事録、社内共有、採用文、営業資料など、日々の業務にそのまま使える形まで落とし込みます。",
   },
   {
     no: "02",
     en: "AI SYSTEM",
-    title: "建設業向けAIお試し開発",
+    titleMain: "建設業向け",
+    titleAccent: "AIお試し開発",
     copy: "まず小さく作って、効果を確かめる。",
     body: "大きなシステムをいきなり作るのではなく、現場で本当に使える小さな仕組みから始めます。日報、見積、問い合わせ対応、採用管理、社内ナレッジなど、業務に合わせてAI活用を設計します。",
   },
   {
     no: "03",
     en: "YOUTUBE GROWTH",
-    title: "建設業特化型YouTube運用代行",
+    titleMain: "建設業特化型",
+    titleAccent: "YouTube運用代行",
     copy: "業界を知る目線で、集客・採用につなげる。",
     body: "ただ動画を作るのではなく、会社の強み、職人の魅力、現場のこだわりを、伝わる言葉と映像に変えます。",
   },
   {
     no: "04",
     en: "CONSTRUCTION SUPPORT",
-    title: "建設 / 外構の下請け工事",
+    titleMain: "建設 / 外構の",
+    titleAccent: "下請け工事",
     copy: "建設工事を原点に持つ会社だから現場も分かる。",
     body: "Nextstepは、2019年に建設工事の会社として立ち上がりました。だからこそ、机上の支援だけではなく、現場の段取り、職人とのやり取り、工事の流れまで理解したうえで支援できます。必要に応じて、建設・外構工事そのものも対応します。",
   },
@@ -135,10 +140,11 @@ export default function Service() {
                   fontWeight: 900,
                   fontSize: "clamp(20px,1.8vw,24px)",
                   letterSpacing: "0.02em",
-                  color: "#E60012",
+                  color: "#141414",
                 }}
               >
-                {s.title}
+                {s.titleMain}
+                <span style={{ color: "#E60012" }}>{s.titleAccent}</span>
               </h3>
               <p
                 style={{
