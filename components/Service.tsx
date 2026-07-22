@@ -33,7 +33,7 @@ const SERVICES = [
 
 export default function Service() {
   return (
-    <section id="service" data-screen-label="Service" style={{ background: "#FFFFFF" }}>
+    <section id="service" data-screen-label="Service" style={{ background: "#F3F2EC" }}>
       <div
         style={{
           maxWidth: 1240,
@@ -53,7 +53,17 @@ export default function Service() {
         >
           建設業を、
           <br />
-          AIと実行支援で前に進める。
+          AIと実行支援で
+          <span
+            className="ns-marker"
+            style={{
+              background: "linear-gradient(transparent 64%, #FFE100 64%)",
+              padding: "0 4px",
+            }}
+          >
+            前に進める
+          </span>
+          。
         </h2>
         <p
           style={{

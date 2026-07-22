@@ -1,4 +1,3 @@
-import { ContactLines } from "./BrandMotif";
 import SectionHead from "./SectionHead";
 
 export default function Contact() {
@@ -158,17 +157,6 @@ export default function Contact() {
         >
           nextstep@techsupply.work
         </p>
-      </div>
-
-      <div
-        className="ns-lines"
-        style={{
-          maxWidth: 1240,
-          margin: "0 auto",
-          padding: "0 clamp(20px,4.5vw,48px) clamp(56px,7vw,90px)",
-        }}
-      >
-        <ContactLines />
       </div>
     </section>
   );
