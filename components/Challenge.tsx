@@ -34,7 +34,7 @@ export default function Challenge() {
         <div
           style={{
             position: "absolute",
-            left: "62.5%",
+            left: "83.9%",
             right: 0,
             bottom: 0,
             height: "35.7%",
@@ -57,7 +57,7 @@ export default function Challenge() {
           style={{
             position: "absolute",
             left: 0,
-            right: "37.5%",
+            right: "16.1%",
             bottom: 0,
             height: "16.3%",
             background: "#FFFFFF",
@@ -71,7 +71,7 @@ export default function Challenge() {
           alt=""
           style={{
             position: "absolute",
-            left: "50.9%",
+            left: "72.3%",
             bottom: "16.3%",
             width: "22.3%",
             height: "auto",
