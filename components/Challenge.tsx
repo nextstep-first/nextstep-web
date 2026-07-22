@@ -48,8 +48,8 @@ export default function Challenge() {
           alt=""
           style={{
             position: "absolute",
-            left: "76%",
-            bottom: "97%",
+            left: "65%",
+            bottom: "96%",
             width: "clamp(56px, 9vw, 125px)",
             height: "auto",
           }}
@@ -83,7 +83,7 @@ export default function Challenge() {
             <span
               className="ns-marker"
               style={{
-                background: "linear-gradient(transparent 84%, #FFFFFF 84%)",
+                background: "linear-gradient(transparent 64%, #FFFFFF 64%)",
                 padding: "0 4px",
               }}
             >
@@ -93,7 +93,7 @@ export default function Challenge() {
             <span
               className="ns-marker"
               style={{
-                background: "linear-gradient(transparent 84%, #FFFFFF 84%)",
+                background: "linear-gradient(transparent 64%, #FFFFFF 64%)",
                 padding: "0 4px",
               }}
             >

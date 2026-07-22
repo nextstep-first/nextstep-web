@@ -160,11 +160,11 @@ export default function Problem() {
             ))}
             <p
               style={{
-                margin: "16px 0 0 min(16vw,176px)",
-                fontSize: 13,
-                fontWeight: 700,
-                color: "#8B8B80",
-                letterSpacing: "0.1em",
+                margin: "20px 0 0 min(8vw,88px)",
+                fontSize: "clamp(16px,1.7vw,21px)",
+                fontWeight: 900,
+                color: "#141414",
+                letterSpacing: "0.08em",
               }}
             >
               ここまで分解できれば、AIが動き出す。
