@@ -13,7 +13,7 @@ export default function Challenge() {
     <section
       id="challenge"
       data-screen-label="Challenge"
-      style={{ background: "#FFEE85", position: "relative", overflow: "hidden" }}
+      style={{ background: "#FFE44D", position: "relative", overflow: "hidden" }}
     >
       {/* 名刺と同じブランド表現：黄色の面の右下が階段状に切れていて、
           その段差の上に n マークが立つ（白い階段＝次セクションの背景と一続きに見える） */}
@@ -48,9 +48,9 @@ export default function Challenge() {
           alt=""
           style={{
             position: "absolute",
-            left: "55%",
-            bottom: "60%",
-            width: "clamp(80px, 12vw, 160px)",
+            left: "76%",
+            bottom: "97%",
+            width: "clamp(56px, 9vw, 125px)",
             height: "auto",
           }}
         />
@@ -80,9 +80,25 @@ export default function Challenge() {
               color: "#141414",
             }}
           >
-            分かっているのに、
+            <span
+              className="ns-marker"
+              style={{
+                background: "linear-gradient(transparent 84%, #FFFFFF 84%)",
+                padding: "0 4px",
+              }}
+            >
+              分かっているのに、
+            </span>
             <br />
-            言葉にできない。
+            <span
+              className="ns-marker"
+              style={{
+                background: "linear-gradient(transparent 84%, #FFFFFF 84%)",
+                padding: "0 4px",
+              }}
+            >
+              言葉にできない。
+            </span>
           </h2>
         </div>
 
@@ -117,8 +133,8 @@ export default function Challenge() {
             AI・文章・数字・業務フローに
             <span
               style={{
-                background: "#141414",
-                color: "#FFFFFF",
+                background: "#FFFFFF",
+                color: "#141414",
                 padding: "1px 8px",
                 borderRadius: 4,
                 fontWeight: 900,

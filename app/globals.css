@@ -157,8 +157,5 @@ img {
     font-size: 16px !important;
     line-height: 1.9 !important;
   }
-  /* スマホでは階段の切り欠きは残し、本文と重なりうる n マークだけ非表示 */
-  .ns-challenge-n {
-    display: none !important;
-  }
+  /* スマホでも n マークは小さく表示（clampの下限サイズで段の上に立つ） */
 }
