@@ -41,6 +41,28 @@ export default function Challenge() {
             background: "#FFFFFF",
           }}
         />
+        {/* 下段：左端から段の角まで伸びる白い帯（上面＝左足の裏の高さ）。
+            これで n は「下の段に左足・上の段に右足」で階段を上る構図になる */}
+        <div
+          style={{
+            position: "absolute",
+            right: "100%",
+            width: "100vw",
+            bottom: 0,
+            height: "16.3%",
+            background: "#FFFFFF",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 0,
+            right: "37.5%",
+            bottom: 0,
+            height: "16.3%",
+            background: "#FFFFFF",
+          }}
+        />
         {/* 段を踏み締める n（右足の裏＝段の上面。3pxだけ踏み込ませる） */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
