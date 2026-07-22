@@ -13,45 +13,44 @@ export default function Challenge() {
     <section
       id="challenge"
       data-screen-label="Challenge"
-      style={{ background: "#FFE100", position: "relative", overflow: "hidden" }}
+      style={{ background: "#FFEE85", position: "relative", overflow: "hidden" }}
     >
-      {/* 装飾：階段を上った先に n マークが立つ（Nextstep＝次の一歩、のブランド表現）。
-          nマークは白背景を透明化した専用画像（n-mark-black.png）を使う */}
+      {/* 名刺と同じブランド表現：黄色の面の右下が階段状に切れていて、
+          その段差の上に n マークが立つ（白い階段＝次セクションの背景と一続きに見える） */}
       <div
         aria-hidden
         className="ns-challenge-deco"
         style={{
           position: "absolute",
-          right: "clamp(16px,4vw,48px)",
-          bottom: "clamp(14px,2.5vw,34px)",
-          width: "clamp(240px,26vw,400px)",
-          aspectRatio: "2 / 1",
+          right: 0,
+          bottom: -1,
+          width: "min(72vw, 680px)",
+          height: "clamp(60px, 9vw, 130px)",
           pointerEvents: "none",
         }}
       >
         <svg
-          viewBox="0 0 400 200"
+          viewBox="0 0 600 130"
+          preserveAspectRatio="none"
           style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
         >
+          {/* 白い階段の切り欠き：右へ行くほど高く */}
           <path
-            d="M 0 196 H 70 V 156 H 140 V 116 H 210 V 76 H 280 V 36 H 400"
-            fill="none"
-            stroke="#141414"
-            strokeWidth="5"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-            opacity="0.35"
+            d="M 0 130 H 600 V 0 H 450 V 50 H 300 V 90 H 150 V 130 Z"
+            fill="#FFFFFF"
           />
         </svg>
+        {/* 段差に立つ n マーク（左足は黄色の段の上、右足元に白の切り欠き） */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/n-mark-black.png"
+          className="ns-challenge-n"
+          src="/assets/n-glyph-black.png"
           alt=""
           style={{
             position: "absolute",
-            right: "3%",
-            bottom: "19.5%",
-            width: "28%",
+            left: "55%",
+            bottom: "60%",
+            width: "clamp(80px, 12vw, 160px)",
             height: "auto",
           }}
         />
