@@ -15,8 +15,9 @@ export default function Challenge() {
       data-screen-label="Challenge"
       style={{ background: "#FFE44D", position: "relative", overflow: "hidden" }}
     >
-      {/* 名刺と同じブランド表現：黄色の面の右下が階段状に切れていて、
-          その段差の上に n マークが立つ（白い階段＝次セクションの背景と一続きに見える） */}
+      {/* 名刺と同じブランド表現（1段）：黄色の右下に白い段が1つ切り込まれ、
+          n の右足がその段を踏み締める。左足は段の左の黄色に着地。
+          数値はグリフ実測値（右足の裏＝下から20.2%、左足＝最下端）から算出 */}
       <div
         aria-hidden
         className="ns-challenge-deco"
@@ -24,23 +25,23 @@ export default function Challenge() {
           position: "absolute",
           right: 0,
           bottom: -1,
-          width: "min(72vw, 680px)",
-          height: "clamp(60px, 9vw, 130px)",
+          width: "clamp(240px, 40vw, 560px)",
+          aspectRatio: "560 / 150",
           pointerEvents: "none",
         }}
       >
-        <svg
-          viewBox="0 0 600 130"
-          preserveAspectRatio="none"
-          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
-        >
-          {/* 白い階段の切り欠き：右へ行くほど高く */}
-          <path
-            d="M 0 130 H 600 V 0 H 450 V 50 H 300 V 90 H 150 V 130 Z"
-            fill="#FFFFFF"
-          />
-        </svg>
-        {/* 段差に立つ n マーク（左足は黄色の段の上、右足元に白の切り欠き） */}
+        {/* 1段の白い切り欠き（右端まで） */}
+        <div
+          style={{
+            position: "absolute",
+            left: "62.5%",
+            right: 0,
+            bottom: 0,
+            height: "35.7%",
+            background: "#FFFFFF",
+          }}
+        />
+        {/* 段を踏み締める n（右足の裏＝段の上面。3pxだけ踏み込ませる） */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           className="ns-challenge-n"
@@ -48,11 +49,10 @@ export default function Challenge() {
           alt=""
           style={{
             position: "absolute",
-            left: "60%",
-            bottom: "96%",
-            width: "clamp(56px, 9vw, 125px)",
+            left: "50.9%",
+            bottom: "16.3%",
+            width: "22.3%",
             height: "auto",
-            transform: "translateY(34px)",
           }}
         />
       </div>
