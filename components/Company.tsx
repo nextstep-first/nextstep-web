@@ -54,7 +54,7 @@ export default function Company() {
           </h2>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/logo.png"
+            src="/assets/logo-transparent.png"
             alt="Nextstep ロゴ"
             style={{
               display: "block",

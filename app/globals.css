@@ -157,4 +157,8 @@ img {
     font-size: 16px !important;
     line-height: 1.9 !important;
   }
+  /* スマホでは本文と重なるため、Challengeの階段＋n装飾は非表示 */
+  .ns-challenge-deco {
+    display: none !important;
+  }
 }

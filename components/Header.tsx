@@ -42,7 +42,7 @@ export default function Header() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/assets/n-mark.png"
+            src="/assets/n-mark-transparent.png"
             alt="Nextstep"
             style={{ height: 30, width: "auto", display: "block" }}
           />

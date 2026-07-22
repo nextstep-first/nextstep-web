@@ -15,47 +15,44 @@ export default function Challenge() {
       data-screen-label="Challenge"
       style={{ background: "#FFE100", position: "relative", overflow: "hidden" }}
     >
-      {/* 装飾：階段状のライン ＋ n マーク（ホームページの要のセクションなので、
-          黄色背景に薄い黒のあしらいでブランドらしさを添える） */}
+      {/* 装飾：階段を上った先に n マークが立つ（Nextstep＝次の一歩、のブランド表現）。
+          nマークは白背景を透明化した専用画像（n-mark-black.png）を使う */}
       <div
         aria-hidden
+        className="ns-challenge-deco"
         style={{
           position: "absolute",
-          inset: 0,
-          overflow: "hidden",
+          right: "clamp(16px,4vw,48px)",
+          bottom: "clamp(14px,2.5vw,34px)",
+          width: "clamp(240px,26vw,400px)",
+          aspectRatio: "2 / 1",
           pointerEvents: "none",
         }}
       >
         <svg
-          viewBox="0 0 260 200"
-          style={{
-            position: "absolute",
-            right: "clamp(3%,6vw,9%)",
-            bottom: "clamp(9%,11vw,16%)",
-            width: "clamp(150px,22vw,300px)",
-            opacity: 0.16,
-          }}
+          viewBox="0 0 400 200"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
         >
           <path
-            d="M10 190 H70 V150 H120 V110 H170 V70 H230 V30"
+            d="M 0 196 H 70 V 156 H 140 V 116 H 210 V 76 H 280 V 36 H 400"
             fill="none"
             stroke="#141414"
-            strokeWidth="4"
+            strokeWidth="5"
             strokeLinejoin="round"
             strokeLinecap="round"
+            opacity="0.35"
           />
         </svg>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/assets/n-mark.png"
+          src="/assets/n-mark-black.png"
           alt=""
           style={{
             position: "absolute",
-            right: "clamp(4%,7vw,10%)",
-            bottom: "clamp(11%,13vw,18%)",
-            width: "clamp(110px,15vw,200px)",
-            filter: "brightness(0)",
-            opacity: 0.08,
+            right: "3%",
+            bottom: "19.5%",
+            width: "28%",
+            height: "auto",
           }}
         />
       </div>
